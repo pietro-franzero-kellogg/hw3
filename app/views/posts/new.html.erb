@@ -1,0 +1,16 @@
+<%= form_with :model => @post do |form| %>
+  <p>
+    <%= form.label "title"%>
+    <%= form.text_field "title" %>
+  </p>
+  <p>
+    <%= form.label "posted_on", "Posted on" %>
+    <%= form.date_field "posted_on" %>
+  </p>
+  <p>
+    <%= form.label "description" %>
+    <%= form.text_field "description" %>
+  </p>
+  <%= form.hidden_field "place_id", "value" => params["place_id"] %>
+  <%= form.submit %>
+<% end %>
