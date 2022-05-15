@@ -3,6 +3,7 @@ class CreatePosts < ActiveRecord::Migration[7.0]
     create_table :posts do |t|
       t.string "title"
       t.text "description"
+      t.text "image"
       t.date "posted_on"
       t.integer "place_id"
       

@@ -8,9 +8,15 @@
     <%= form.date_field "posted_on" %>
   </p>
   <p>
+    <%= form.label "image", "Photo URL" %>
+    <%= form.text_field "image" %>
+  </p>
+  <p>
     <%= form.label "description" %>
     <%= form.text_field "description" %>
   </p>
   <%= form.hidden_field "place_id", "value" => params["place_id"] %>
   <%= form.submit %>
 <% end %>
+
+<p><a href="/places/<%= params["place_id"] %>">Go Back</a></p>

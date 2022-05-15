@@ -3,6 +3,7 @@
 <% for post in @posts %>
     <h2 class="post_title"><%= post["title"] %></h2>
     <h4 class="post_date"><%= post["posted_on"] %></h4>
+    <img class="img-fluid" src="<%= post["image"] %>" class="w-full">
     <p class="post_description"><%= post["description"] %><p>
 <% end %>
 
